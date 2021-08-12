@@ -10,6 +10,8 @@
   engine_macos="Quake2"
   basegame="baseq2"
   basegamename="Quake II"
+  knowngame="ctf"
+  knowngamename="Quake II: CTF"
   unknowngamename="Custom Quake II modification"
   default_scale="1.0"
   no_patch="1"
