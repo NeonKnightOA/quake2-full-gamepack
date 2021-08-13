@@ -85,6 +85,7 @@ def main():
     for item in sorted(common.ENTITIES):
         row = common.ENTITIES[item]
         quaked = row["quaked"]
+        baseitem = row["base_item"]
         model = ""
         box1 = ""
         box2 = ""
@@ -93,7 +94,7 @@ def main():
         try:
             color = parans[0]
         except AttributeError:
-            common.fatal("Failed it find color in: "+quaked)
+            common.fatal("Failed to find color in: "+quaked)
         if len(parans) > 1:
             box1 = parans[1]
         if len(parans) > 2:
@@ -103,7 +104,7 @@ def main():
         xmlType = "point"
         if not (box1 or box2):
             xmlType = "group"
-        print("  <"+xmlType+" name=\"" + item + "\" color=\""+color+"\"", end="")
+        print("  <"+xmlType+" name=\"" + baseitem + "\" color=\""+color+"\"", end="")
         if (box1 and box2):
             print(" box=\""+box1+" "+box2+"\"", end="")
         print(" model=\""+model+"\">")
