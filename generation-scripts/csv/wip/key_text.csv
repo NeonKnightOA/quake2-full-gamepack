@@ -1,0 +1,29 @@
+key;type;fullname;basekey;text
+key_angle;integer;Angle;angle;Facing angle of the entity (Yaw).
+key_angles;angle;Angles;angles;Facing angles of the entity (Pitch Yaw Roll).
+key_delay;float;Delay;delay;Target delay time.
+key_killtarget;string;Target to Kill;killtarget;Target to fully delete.
+key_message;string;Message;message;When picked up, display this message.
+key_target;string;Target to Activate;target;When picked up, activates this target.
+kay_targetname;string;Target Name for Events;targetname;Name of the entity for events.
+key_team;string;Item Team Name;team;For teamed items, this is the name that teams them.
+key__color;color;Light Color;_color;Color of the light entity.
+key_shadowlightconeangle;float;Shadow Light Cone Angle;shadowlightconeangle;Sets the outer cone angle if this light is a spot light.
+key_shadowlightendfadedistance;float;Shadow Light End Fade Distance;shadowlightendfadedistance;Distance in world units (from player's view position) in which the light is fully faded out and not rendered.
+key_shadowlightintensity;float;Shadow Light Intensity;shadowlightintensity;Intensity scalar for the light.
+key_shadowlightradius;float;Shadow Light Radius;shadowlightradius;Sets the radius of a dynamic shadow light. Becomes a dynamic light if this is bigger than 0.
+key_shadowlightresolution;integer;Shadow Light Resolution;shadowlightresolution;"Shadow map resolution; leave blank to automatically determine from radius."
+key_shadowlightstartfadedistance;float;Shadow Light Start Fade Distance;shadowlightstartfadedistance;The distance in world units (from player's view position) in which fading begins.
+key_shadowlightstyle;integer;Shadow Light Style;shadowlightstyle;Appearance of the dynamic light. See Notes.
+key_shadowlightstyletarget;string;Shadow Light Style Target;shadowlightstyletarget;Light entity to pick up style ID from.
+key__dirt;float;Dirt Mapping;_dirt;Overrides dirt mapping choice from compiler.
+key__minlight;float;Minimum Light;_minlight;Minimum light for all surfaces.
+key__minlight_exclude;string;Exclude from Minlight;_minlight_exclude;Textures to exclude from minlighting.
+key__mincolor;color;Minlight Color;_mincolor;Color taken by minlight.
+key__mirrorinside;boolean;Double-Sided Face;_mirrorinside;If checked, allows the use of double-sided faces.
+key__object_channel_mask;integer;Transparency Bitflag;_object_channel_mask;Bitflag that specifies which channels should undergo transparency. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392
+key__phong;boolean;Phong Shading;_phong;If checked, enables phong shading in the brush.
+key__phong_angle;float;Phong Shading Angle;_phong_angle;If Phong Shading is enabled, specifies the lighting angle.
+key__shadow;boolean;Shadow Casting;_shadow;If checked, the entity casts a shadow.
+key__shadowself;boolean;Shadow Over Self;_shadowseof;If checked, casts a shadow over itself.
+key_bmodel_anim_alt_end;integer;Alt. Animation End Frame;bmodel_anim_alt_end;End frame of alternate animation.
