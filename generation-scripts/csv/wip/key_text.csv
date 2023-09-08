@@ -1,21 +1,37 @@
 key;type;fullname;basekey;text
+key__anglescale;float;Light Angle Scale;_anglescale;Sets a scaling factor for how much influence the angle of incidence of light on a surface has on the brightness of the surface. n must be between 0.0 and 1.0. Smaller values mean less attenuation, with zero meaning that angle of incidence has no effect at all on the brightness.
 key__color;color;Light Color;_color;Color of the light entity.
+key__deviance;float;Light Deviance;_deviance;Split up the light into a sphere of randomly positioned lights within radius 'n' (in world units). Useful to give shadows a wider penumbra. '_samples' specifies the number of lights in the sphere. The 'light' value is automatically scaled down for most lighting formulas (except linear and non-additive minlight) to attempt to keep the brightness equal.
 key__dirt;float;Dirt Mapping;_dirt;Overrides dirt mapping choice from compiler.
+key__dirt_light;integer;Dirt Mapping;_dirt;"Overrides dirt mapping choice from worldspawn for this particular light. -1 Forces off; 0 = Worldspawn decides; 1 = Forces on."
+key__dirtscale;float;Dirt Mapping Scale;_dirtscale;Overrides the global '_dirtscale' or '_dirtgain' settings to change how this light is affected by dirtmapping (ambient occlusion).
+key__light_channel_mask;integer;Light Channel Bitflag;_light_channel_mask;Bitflag that specifies which channels should be projected in the lighting. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392.
 key__mincolor;color;Minlight Color;_mincolor;Color taken by minlight.
 key__minlight;float;Minimum Light;_minlight;Minimum light for all surfaces.
 key__minlight_exclude;string;Exclude from Minlight;_minlight_exclude;Textures to exclude from minlighting.
 key__mirrorinside;boolean;Double-Sided Face;_mirrorinside;If checked, allows the use of double-sided faces.
-key__object_channel_mask;integer;Transparency Bitflag;_object_channel_mask;Bitflag that specifies which channels should undergo transparency. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392
+key__object_channel_mask;integer;Transparency Bitflag;_object_channel_mask;Bitflag that specifies which channels should undergo transparency. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392.
 key__phong;boolean;Phong Shading;_phong;If checked, enables phong shading in the brush.
 key__phong_angle;float;Phong Shading Angle;_phong_angle;If Phong Shading is enabled, specifies the lighting angle.
+key__project_fov;float;Projection FOV;_project_fov;Specifies an angle for texture projection.
+key__project_mangle;string;Projection Direction;_project_mangle;Specifies lighting projection for the texture.
+key__project_texture;string;Projection Texture;_project_texture;Specifies which texture should be projected.
+key__samples;float;Amnt. Of Deviance Lights;_samples;Number of lights to use for '_deviance'. Only used if '_deviance' is set.
 key__shadow;boolean;Shadow Casting;_shadow;If checked, the entity casts a shadow.
+key__shadow_channel_mask;integer;Shadow Channel Mask;_shadow_channel_mask;Bitflag that specifies which channels should cast a shadow in the lighting. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392.
 key__shadowself;boolean;Shadow Over Self;_shadowseof;If checked, casts a shadow over itself.
+key__softangle;float;Spotlight Soft Angle;_softangle;Specifies the angle in degrees for an inner spotlight cone (must be less than the 'angle' cone. Creates a softer transition between the full brightness of the inner cone to the edge of the outer cone.
+key__surface;string;Surface Light Texture;_surface;Makes surfaces with the given texture name emit light, by using this light as a template which is copied across those surfaces. Lights are spaced about 128 units (though possibly closer due to bsp splitting) apart and positioned 2 units above the surfaces
+key__surface_offset;float;Surface Light Offset;_surface_offset;Controls the offset lights are placed above surfaces for '_surface'.
+key__surface_spotlight;boolean;Is Surface Spotlight?;_surface_spotlight;"Is this surface light a spotlight? If so, orient it so it points away from the surface normal. 0 = No; 1 = Yes."
 key_accel_func_plat;float;Acceleration;accel;After activation, it accelerates at this rate. Its top speed is mentioned in speed.
 key_accel_func_rotating;float;Acceleration;accel;If the accel flag is checked, after activation, it accelerates at this rate. Its top speed is mentioned in speed.
 key_accel_func_water;float;Acceleration;accel;Determines raising speed based on the lowest player's distance. It's the divisor.
+key_alpha_misc_blackhole;float;Alpha Value;alpha;Sets the transparency of the blackhole.
 key_ammo;integer;Ammo Amount;ammo;Amount of ammo this weapon gives on pickup.
 key_angle;integer;Angle;angle;Facing angle of the entity (Yaw).
 key_angle_info_world_text;integer;Text Angle;angle;"Facing angle of the text (Yaw 0-360). -3 = Tracks player; -2 = Down; -1 = Up."
+key_angle_light;floar;Light Cone Angle;angle;Specifies the angle in degrees for a spotlight cone.
 key_angles;angle;Angles;angles;Facing angles of the entity (Pitch Yaw Roll).
 key_bmodel_anim_alt_end;integer;Alt. Animation End Frame;bmodel_anim_alt_end;End frame of alternate animation.
 key_bmodel_anim_alt_nowrap;boolean;Alt. Animation No Wrapping;bmodel_anim_alt_nowrap;If checked, alternate frames are clamped rather than wrapped.
@@ -32,6 +48,7 @@ key_decel_func_plat;float;Deceleration;decel;After activation, it desacelerates 
 key_decel_func_rotating;float;Deceleration;decel;If the accel flag is checked, after activation, it desacelerates at this rate. Starts from the top speed and goes down to 0.
 key_delay;float;Target Firing Delay;delay;Target delay time.
 key_delay_func_object_repair;float;Spark Delay;delay;Delay time between sparks.
+kay_delay_light;integer;Attenuation Style;delay;"Attenuation formula for this light entity. 0 = Linear falloff; 1 = Inv. distance falloff; 2 = Inv. distance squared; 3 = No falloff; 4 = Local minlight; 5 = Inv. distance 2"
 key_distance_func_door_rotating;float;Rotation in Degrees;distance;Rotation in degrees of the door.
 key_dmg_func_door;float;Amnt. Damage on Block;dmg;Amount of damage the door takes when blocked.
 key_dmg_func_explosive;float;Amnt. Damage Dealt;dmg;When exploding, deals this amount of damage on its radius.
@@ -43,8 +60,10 @@ key_health_func_door;float;Amnt. Damage to Trigger;health;Amount of damage this 
 key_health_func_explosive;float;Amnt. Damage to Trigger;health;Amount of damage this entity takes before exploding.
 key_height;float;Mov. Distance;height;Movement distance of the platform.
 key_killtarget;string;Target to Kill;killtarget;Target to fully delete.
+key_light;float;Light Brightness;light;Brightness intensity of this light entity. Positive values: brighter lighting. Negative values: subtracts lighting from surrounding entities.
 key_lip;float;Post-Move Lip;lip;Lip remaining after move.
-key_mass;float;Mass (Debris);mass;When exploding, leaves this amount of debris all around.
+key_mangle;angle;Spotlight Direction;mangle;Turns the light into a spotlight and specifies the direction of light using yaw(x), pitch(y) and roll(z) in degrees. Yaw specifies the angle around the Z-axis from 0 to 359 degrees and pitch specifies the angle from 90 (straight up) to -90 (straight down). Roll has no effect, so use any value (e.g. 0). Often easier than the 'target' method.
+key_mass_func_explosive;float;Mass (Debris);mass;When exploding, leaves this amount of debris all around.
 key_message_entity;string;Message;message;Displays this message when this entity is triggered.
 key_message_item;string;Message;message;Displays this message when this item is picked up.
 key_noise_end;string;Sound On Ending;noise_end;Sound to play when the entity is finished.
@@ -59,6 +78,7 @@ key_quantity_ammo;integer;Ammo Amount;quantity;How much ammo this box will give.
 key_radius;float;Detection Radius;radius;Detection Radius for players.
 key_radius_info_world_text;float;Text Size;radius;Specifies the size of the text.
 key_random_func_timer;float;Waiting Variance;random;Waiting time variance (+/-). Must be equal or less than the value in wait.
+key_scale_misc_blackhole;float;Blackhole Scale;scale;Sets the scale of the blackhole.
 key_shadowlightconeangle;float;Shadow Light Cone Angle;shadowlightconeangle;Sets the outer cone angle if this light is a spot light.
 key_shadowlightendfadedistance;float;Shadow Light End Fade Distance;shadowlightendfadedistance;Distance in world units (from player's view position) in which the light is fully faded out and not rendered.
 key_shadowlightintensity;float;Shadow Light Intensity;shadowlightintensity;Intensity scalar for the light.
@@ -74,8 +94,10 @@ key_speed_func_button;float;Button Speed;speed;Specifies how fast the button is 
 key_speed_func_door;float;Door Speed;speed;Specifies how fast the door is opened.
 key_speed_func_eye;float;Detection Degrees;speed;Determines how fast we should move on each axis in order to reach the target.
 key_speed_func_plat;float;Platform Speed;speed;Specifies how fast the platform should move.
+key_speed_misc_crashviper;float;Crashing Speed;speed;How fast should the viper crash into the world.
 key_style_func_clock;integer;Clock Style;style;"0 = xx; 1 = xx:xx; 2 = xx:xx:xx"
 key_style_func_force_wall;integer;Wall Color Hue;style;Hue of the force wall.
+key_style_light;integer;Light Style;style;"Defines the lighting style. 0 = Normal; 1 = Flicker #1; 2 = Slow Strong Pulse; 3 = Candle #1; 4 = Fast Strobe; 5 = Gentle Pulse #1; 6 = Flicker #2; 7 = Candle #2; 8 = Candle #3; 9 = Slow Strobe; 10 = Fluorescent Flicker; 11 = Slow pulse, no black."
 key_target;string;Target to Activate;target;When picked up, activates this target.
 key_target_func_train;string;First Corner Target;target;The targetname of the first path_corner where the train activates.
 key_targetname;string;Target Name for Events;targetname;Name of the entity for events.
@@ -92,3 +114,4 @@ key_wait_func_eye;float;Waiting Time;wait;Waiting time after losing the target b
 key_wait_func_timer;float;Waiting Time;wait;Base Waiting time. Can be combined with random for differing variations.
 key_wait_func_water;float;Waiting Time;wait;Waiting time before water returns to its initial state.
 key_wait_hint_path;float;Waiting Time;wait;Waiting time before this path can be taken.
+key_wait_light;float;Fade Distance Multiplier;wait;Value that scales the fade distance of this light entity. Values larger than 1 make the light fade more quickly. Values lesser than 1 make the light fade slower and reach further.
