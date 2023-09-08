@@ -1,13 +1,64 @@
 key;type;fullname;basekey;text
-key_angle;integer;Angle;angle;Facing angle of the entity (Yaw).
-key_angles;angle;Angles;angles;Facing angles of the entity (Pitch Yaw Roll).
-key_delay;float;Delay;delay;Target delay time.
-key_killtarget;string;Target to Kill;killtarget;Target to fully delete.
-key_message;string;Message;message;When picked up, display this message.
-key_target;string;Target to Activate;target;When picked up, activates this target.
-kay_targetname;string;Target Name for Events;targetname;Name of the entity for events.
-key_team;string;Item Team Name;team;For teamed items, this is the name that teams them.
 key__color;color;Light Color;_color;Color of the light entity.
+key__dirt;float;Dirt Mapping;_dirt;Overrides dirt mapping choice from compiler.
+key__mincolor;color;Minlight Color;_mincolor;Color taken by minlight.
+key__minlight;float;Minimum Light;_minlight;Minimum light for all surfaces.
+key__minlight_exclude;string;Exclude from Minlight;_minlight_exclude;Textures to exclude from minlighting.
+key__mirrorinside;boolean;Double-Sided Face;_mirrorinside;If checked, allows the use of double-sided faces.
+key__object_channel_mask;integer;Transparency Bitflag;_object_channel_mask;Bitflag that specifies which channels should undergo transparency. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392
+key__phong;boolean;Phong Shading;_phong;If checked, enables phong shading in the brush.
+key__phong_angle;float;Phong Shading Angle;_phong_angle;If Phong Shading is enabled, specifies the lighting angle.
+key__shadow;boolean;Shadow Casting;_shadow;If checked, the entity casts a shadow.
+key__shadowself;boolean;Shadow Over Self;_shadowseof;If checked, casts a shadow over itself.
+key_accel_func_plat;float;Acceleration;accel;After activation, it accelerates at this rate. Its top speed is mentioned in speed.
+key_accel_func_rotating;float;Acceleration;accel;If the accel flag is checked, after activation, it accelerates at this rate. Its top speed is mentioned in speed.
+key_accel_func_water;float;Acceleration;accel;Determines raising speed based on the lowest player's distance. It's the divisor.
+key_ammo;integer;Ammo Amount;ammo;Amount of ammo this weapon gives on pickup.
+key_angle;integer;Angle;angle;Facing angle of the entity (Yaw).
+key_angle_info_world_text;integer;Text Angle;angle;"Facing angle of the text (Yaw 0-360). -3 = Tracks player; -2 = Down; -1 = Up."
+key_angles;angle;Angles;angles;Facing angles of the entity (Pitch Yaw Roll).
+key_bmodel_anim_alt_end;integer;Alt. Animation End Frame;bmodel_anim_alt_end;End frame of alternate animation.
+key_bmodel_anim_alt_nowrap;boolean;Alt. Animation No Wrapping;bmodel_anim_alt_nowrap;If checked, alternate frames are clamped rather than wrapped.
+key_bmodel_anim_alt_speed;integer;Alt. Animation Speed;bmodel_anim_alt_speed;Alternate animation speed in milliseconds.
+key_bmodel_anim_alt_start;integer;Alt. Animation Starting Frame;bmodel_anim_alt_start;Starting frame of alternate animation.
+key_bmodel_anim_alt_style;integer;Alt. Animation Style;bmodel_anim_alt_style;"0 = Forwards; 1 = Backwards; 2 = Random"
+key_bmodel_anim_end;integer;Animation End Frame;bmodel_anim_end;End frame of animation.
+key_bmodel_anim_nowrap;boolean;Animation No Wrapping;bmodel_anim_nowrap;If checked, frames are clamped rather than wrapped.
+key_bmodel_anim_speed;integer;Animation Speed;bmodel_anim_speed;Animation speed in milliseconds.
+key_bmodel_anim_start;integer;Animation Starting Frame;bmodel_anim_start;Starting frame of animation.
+key_bmodel_anim_style;integer;Animation Style;bmodel_anim_style;"0 = Forwards; 1 = Backwards; 2 = Random"
+key_count_func_clock;integer;Counter;count;Clock counter.
+key_decel_func_plat;float;Deceleration;decel;After activation, it desacelerates at this rate. Starts from the top speed and goes down to 0.
+key_decel_func_rotating;float;Deceleration;decel;If the accel flag is checked, after activation, it desacelerates at this rate. Starts from the top speed and goes down to 0.
+key_delay;float;Target Firing Delay;delay;Target delay time.
+key_delay_func_object_repair;float;Spark Delay;delay;Delay time between sparks.
+key_distance_func_door_rotating;float;Rotation in Degrees;distance;Rotation in degrees of the door.
+key_dmg_func_door;float;Amnt. Damage on Block;dmg;Amount of damage the door takes when blocked.
+key_dmg_func_explosive;float;Amnt. Damage Dealt;dmg;When exploding, deals this amount of damage on its radius.
+key_dmg_func_object;float;Amnt. Damage on Crush;dmg;Deals this amount of damage when it crushes another entity (mostly players).
+key_dmg_func_plat;float;Amnt. Damage on Crush;dmg;Deals this amount of damage when it crushes another entity (mostly players).
+key_eye_position;vector;Eye Offset;eye_position;Values X Y Z, signals the offset from the origin brush's center of the camera where the eye is located.
+key_health_func_button;float;Amnt. Damage to Trigger;health;Amount of damage this button takes before being triggered.
+key_health_func_door;float;Amnt. Damage to Trigger;health;Amount of damage this door takes before being triggered.
+key_health_func_explosive;float;Amnt. Damage to Trigger;health;Amount of damage this entity takes before exploding.
+key_height;float;Mov. Distance;height;Movement distance of the platform.
+key_killtarget;string;Target to Kill;killtarget;Target to fully delete.
+key_lip;float;Post-Move Lip;lip;Lip remaining after move.
+key_mass;float;Mass (Debris);mass;When exploding, leaves this amount of debris all around.
+key_message_entity;string;Message;message;Displays this message when this entity is triggered.
+key_message_item;string;Message;message;Displays this message when this item is picked up.
+key_noise_end;string;Sound On Ending;noise_end;Sound to play when the entity is finished.
+key_noise_func_train;string;Traveling Sound;noise;Sound that play while the entity is traveling.
+key_noise_middle;string;Sound While Active;noise_middle;Sound to play when the entity is active.
+key_noise_start;string;Sound On Start;noise_start;Sound to play when the entity is started.
+key_pathtarget_func_clock;string;Target to Activate;pathtarget;When the entity is triggered, this target is triggered too.
+key_pathtarget_func_eye;string;Target to Look At;pathtarget;Automatically sets the eye position. Point this towards an info_notnull which gets freed after spawn.
+key_pathtarget_func_timer;string;Target to Travel To;pathtarget;Target to fire when we reach a point.
+key_pausetime;float;Pause Time;pausetime;Additional delay for START_ON timers.
+key_quantity_ammo;integer;Ammo Amount;quantity;How much ammo this box will give.
+key_radius;float;Detection Radius;radius;Detection Radius for players.
+key_radius_info_world_text;float;Text Size;radius;Specifies the size of the text.
+key_random_func_timer;float;Waiting Variance;random;Waiting time variance (+/-). Must be equal or less than the value in wait.
 key_shadowlightconeangle;float;Shadow Light Cone Angle;shadowlightconeangle;Sets the outer cone angle if this light is a spot light.
 key_shadowlightendfadedistance;float;Shadow Light End Fade Distance;shadowlightendfadedistance;Distance in world units (from player's view position) in which the light is fully faded out and not rendered.
 key_shadowlightintensity;float;Shadow Light Intensity;shadowlightintensity;Intensity scalar for the light.
@@ -16,14 +67,28 @@ key_shadowlightresolution;integer;Shadow Light Resolution;shadowlightresolution;
 key_shadowlightstartfadedistance;float;Shadow Light Start Fade Distance;shadowlightstartfadedistance;The distance in world units (from player's view position) in which fading begins.
 key_shadowlightstyle;integer;Shadow Light Style;shadowlightstyle;Appearance of the dynamic light. See Notes.
 key_shadowlightstyletarget;string;Shadow Light Style Target;shadowlightstyletarget;Light entity to pick up style ID from.
-key__dirt;float;Dirt Mapping;_dirt;Overrides dirt mapping choice from compiler.
-key__minlight;float;Minimum Light;_minlight;Minimum light for all surfaces.
-key__minlight_exclude;string;Exclude from Minlight;_minlight_exclude;Textures to exclude from minlighting.
-key__mincolor;color;Minlight Color;_mincolor;Color taken by minlight.
-key__mirrorinside;boolean;Double-Sided Face;_mirrorinside;If checked, allows the use of double-sided faces.
-key__object_channel_mask;integer;Transparency Bitflag;_object_channel_mask;Bitflag that specifies which channels should undergo transparency. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392
-key__phong;boolean;Phong Shading;_phong;If checked, enables phong shading in the brush.
-key__phong_angle;float;Phong Shading Angle;_phong_angle;If Phong Shading is enabled, specifies the lighting angle.
-key__shadow;boolean;Shadow Casting;_shadow;If checked, the entity casts a shadow.
-key__shadowself;boolean;Shadow Over Self;_shadowseof;If checked, casts a shadow over itself.
-key_bmodel_anim_alt_end;integer;Alt. Animation End Frame;bmodel_anim_alt_end;End frame of alternate animation.
+key_sounds;boolean;Is Silent;sounds;If checked, silences the entity.
+key_sounds_func_water;integer;Sound Style;sounds;"Specifies the sound the water emits. 0 = Silent; 1 = Water 1; 2 = Water 2."
+key_sounds_info_world_text;integer;Text Color;sounds;"0 = White; 1 = Red; 2 = Blue; 3 = Green; 4 = Yellow; 5 = Black; 6 = Cyan; 7 = Orange."
+key_speed_func_button;float;Button Speed;speed;Specifies how fast the button is pressed.
+key_speed_func_door;float;Door Speed;speed;Specifies how fast the door is opened.
+key_speed_func_eye;float;Detection Degrees;speed;Determines how fast we should move on each axis in order to reach the target.
+key_speed_func_plat;float;Platform Speed;speed;Specifies how fast the platform should move.
+key_style_func_clock;integer;Clock Style;style;"0 = xx; 1 = xx:xx; 2 = xx:xx:xx"
+key_style_func_force_wall;integer;Wall Color Hue;style;Hue of the force wall.
+key_target;string;Target to Activate;target;When picked up, activates this target.
+key_target_func_train;string;First Corner Target;target;The targetname of the first path_corner where the train activates.
+key_targetname;string;Target Name for Events;targetname;Name of the entity for events.
+key_targetname_info_player_coop;string;Target Name for Events;targetname;Points to a spawnpoint matching the previous level's target_changelevel.
+key_team_func_door;string;Door Team Name;team;For teamed doors, this is the name that binds them.
+key_team_func_rotating;string;Rotation Team Name;team;For teamed brushes in this entity, this is the name that binds them.
+key_team_func_train;string;Train Team Name;team;For teamed brushes in a train, this is the name that binds them.
+key_team_func_water;string;Water Team Name;team;Teams this water brush with another entity that triggers it.
+key_team_item;string;Item Team Name;team;For teamed items, this is the name that teams them.
+key_vision_cone;float;Vision Cone;vision_cone;Determines how wide the vision cone should be.
+key_wait_func_button;float;Waiting Time;wait;Waiting time before the button is resetted.
+key_wait_func_door;float;Waiting Time;wait;Waiting time before the door is resetted.
+key_wait_func_eye;float;Waiting Time;wait;Waiting time after losing the target before returning to a neutral angle.
+key_wait_func_timer;float;Waiting Time;wait;Base Waiting time. Can be combined with random for differing variations.
+key_wait_func_water;float;Waiting Time;wait;Waiting time before water returns to its initial state.
+key_wait_hint_path;float;Waiting Time;wait;Waiting time before this path can be taken.
