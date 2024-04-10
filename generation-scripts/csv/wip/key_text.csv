@@ -1,156 +1,156 @@
-key;type;fullname;basekey;text
-key__anglescale;float;Light Angle Scale;_anglescale;Sets a scaling factor for how much influence the angle of incidence of light on a surface has on the brightness of the surface. n must be between 0.0 and 1.0. Smaller values mean less attenuation, with zero meaning that angle of incidence has no effect at all on the brightness.
-key__color;color;Light Color;_color;Color of the light entity.
-key__deviance;float;Light Deviance;_deviance;Split up the light into a sphere of randomly positioned lights within radius 'n' (in world units). Useful to give shadows a wider penumbra. '_samples' specifies the number of lights in the sphere. The 'light' value is automatically scaled down for most lighting formulas (except linear and non-additive minlight) to attempt to keep the brightness equal.
-key__dirt;float;Dirt Mapping;_dirt;Overrides dirt mapping choice from compiler.
-key__dirt_light;integer;Dirt Mapping;_dirt;"Overrides dirt mapping choice from worldspawn for this particular light. -1 Forces off; 0 = Worldspawn decides; 1 = Forces on."
-key__dirtscale;float;Dirt Mapping Scale;_dirtscale;Overrides the global '_dirtscale' or '_dirtgain' settings to change how this light is affected by dirtmapping (ambient occlusion).
-key__light_channel_mask;integer;Light Channel Bitflag;_light_channel_mask;Bitflag that specifies which channels should be projected in the lighting. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392.
-key__mincolor;color;Minlight Color;_mincolor;Color taken by minlight.
-key__minlight;float;Minimum Light;_minlight;Minimum light for all surfaces.
-key__minlight_exclude;string;Exclude from Minlight;_minlight_exclude;Textures to exclude from minlighting.
-key__mirrorinside;boolean;Double-Sided Face;_mirrorinside;If checked, allows the use of double-sided faces.
-key__object_channel_mask;integer;Transparency Bitflag;_object_channel_mask;Bitflag that specifies which channels should undergo transparency. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392.
-key__phong;boolean;Phong Shading;_phong;If checked, enables phong shading in the brush.
-key__phong_angle;float;Phong Shading Angle;_phong_angle;If Phong Shading is enabled, specifies the lighting angle.
-key__project_fov;float;Projection FOV;_project_fov;Specifies an angle for texture projection.
-key__project_mangle;string;Projection Direction;_project_mangle;Specifies lighting projection for the texture.
-key__project_texture;string;Projection Texture;_project_texture;Specifies which texture should be projected.
-key__samples;float;Amnt. Of Deviance Lights;_samples;Number of lights to use for '_deviance'. Only used if '_deviance' is set.
-key__shadow;boolean;Shadow Casting;_shadow;If checked, the entity casts a shadow.
-key__shadow_channel_mask;integer;Shadow Channel Mask;_shadow_channel_mask;Bitflag that specifies which channels should cast a shadow in the lighting. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392.
-key__shadowself;boolean;Shadow Over Self;_shadowself;If checked, casts a shadow over itself.
-key__softangle;float;Spotlight Soft Angle;_softangle;Specifies the angle in degrees for an inner spotlight cone (must be less than the 'angle' cone. Creates a softer transition between the full brightness of the inner cone to the edge of the outer cone.
-key__surface;string;Surface Light Texture;_surface;Makes surfaces with the given texture name emit light, by using this light as a template which is copied across those surfaces. Lights are spaced about 128 units (though possibly closer due to bsp splitting) apart and positioned 2 units above the surfaces
-key__surface_offset;float;Surface Light Offset;_surface_offset;Controls the offset lights are placed above surfaces for '_surface'.
-key__surface_spotlight;boolean;Is Surface Spotlight?;_surface_spotlight;"Is this surface light a spotlight? If so, orient it so it points away from the surface normal. 0 = No; 1 = Yes."
-key_accel_func_plat;float;Acceleration;accel;After activation, it accelerates at this rate. Its top speed is mentioned in speed.
-key_accel_func_rotating;float;Acceleration;accel;If the accel flag is checked, after activation, it accelerates at this rate. Its top speed is mentioned in speed.
-key_accel_func_water;float;Acceleration;accel;Determines raising speed based on the lowest player's distance. It's the divisor.
-key_alpha_misc_blackhole;float;Blackhole Alpha;alpha;Sets the transparency of the blackhole.
-key_alpha_misc_insane;float;Soldier Alpha;alpha;Sets the transparency of the lobotomized soldier.
-key_alpha_monster;float;Monster Alpha;alpha;Sets the transparency of the monster.
-key_ammo;integer;Ammo Amount;ammo;Amount of ammo this weapon gives on pickup.
-key_angle;integer;Angle;angle;Facing angle of the entity (Yaw).
-key_angle_info_world_text;integer;Text Angle;angle;"Facing angle of the text (Yaw 0-360). -3 = Tracks player; -2 = Down; -1 = Up."
-key_angle_light;float;Light Cone Angle;angle;Specifies the angle in degrees for a spotlight cone.
-key_angles;angle;Angles;angles;Facing angles of the entity (Pitch Yaw Roll).
-key_bmodel_anim_alt_end;integer;Alt. Animation End Frame;bmodel_anim_alt_end;End frame of alternate animation.
-key_bmodel_anim_alt_nowrap;boolean;Alt. Animation No Wrapping;bmodel_anim_alt_nowrap;If checked, alternate frames are clamped rather than wrapped.
-key_bmodel_anim_alt_speed;integer;Alt. Animation Speed;bmodel_anim_alt_speed;Alternate animation speed in milliseconds.
-key_bmodel_anim_alt_start;integer;Alt. Animation Starting Frame;bmodel_anim_alt_start;Starting frame of alternate animation.
-key_bmodel_anim_alt_style;integer;Alt. Animation Style;bmodel_anim_alt_style;"0 = Forwards; 1 = Backwards; 2 = Random"
-key_bmodel_anim_end;integer;Animation End Frame;bmodel_anim_end;End frame of animation.
-key_bmodel_anim_nowrap;boolean;Animation No Wrapping;bmodel_anim_nowrap;If checked, frames are clamped rather than wrapped.
-key_bmodel_anim_speed;integer;Animation Speed;bmodel_anim_speed;Animation speed in milliseconds.
-key_bmodel_anim_start;integer;Animation Starting Frame;bmodel_anim_start;Starting frame of animation.
-key_bmodel_anim_style;integer;Animation Style;bmodel_anim_style;"0 = Forwards; 1 = Backwards; 2 = Random"
-key_count_func_clock;integer;Counter;count;Clock counter.
-key_count_target_character;integer;Character Position;count;The position of this character in the overall target_string string.
-key_count_target_earthquake;float;Earthquake Duration;count;Overall duration of the earthquake.
-key_decel_func_plat;float;Deceleration;decel;After activation, it desacelerates at this rate. Starts from the top speed and goes down to 0.
-key_decel_func_rotating;float;Deceleration;decel;If the accel flag is checked, after activation, it desacelerates at this rate. Starts from the top speed and goes down to 0.
-key_delay;float;Target Firing Delay;delay;Target delay time.
-key_delay_func_object_repair;float;Spark Delay;delay;Delay time between sparks.
-key_delay_light;integer;Attenuation Style;delay;"Attenuation formula for this light entity. 0 = Linear falloff; 1 = Inv. distance falloff; 2 = Inv. distance squared; 3 = No falloff; 4 = Local minlight; 5 = Inv. distance 2"
-key_delay_target_healthbar;float;Vanishing Delay;delay;After the boss is killed, the bar spends this amount of time on screen before disappearing.
-key_delay_target_mal_laser;float;Laser Delay;delay;Laser Delay.
-key_distance_func_door_rotating;float;Rotation in Degrees;distance;Rotation in degrees of the door.
-key_distance_misc_player_mannequin;float;Gesture When Triggered;distance;Gesture To Use When Triggered. 0 = FlipOff, 1 = Salute, 2 = Taunt, 3 = Wave, 4 = Point.
-key_dmg_func_door;float;Amnt. Damage on Block;dmg;Amount of damage the door takes when blocked.
-key_dmg_func_explosive;float;Amnt. Damage Dealt;dmg;When exploding, deals this amount of damage on its radius.
-key_dmg_func_object;float;Amnt. Damage on Crush;dmg;Deals this amount of damage when it crushes another entity (mostly players).
-key_dmg_misc_viper_bomb;float;Amnt. Damage on Explosion;dmg;Deals this amount of damage on explosion.
-key_dmg_target_blaster;float;Amnt. Damage Dealt;dmg;Deals this amount of damage per blast.
-key_dmg_target_laser;float;Amnt. Damage Dealt;dmg;Deals this amount of damage over time as long as the target is touched by the laser.
-key_eye_position;vector;Eye Offset;eye_position;Values X Y Z, signals the offset from the origin brush's center of the camera where the eye is located.
-key_fade_end_dist;integer;Fade Ending Distance;fade_end_dist;Distance in units that fade ends, should be greater than fade_start_dist.
-key_fade_start_dist;integer;Fade Starting Distance;fade_start_dist;Distance in units that fade begins, should be smaller than fade_end_dist.
-key_goals_misc_player_mannequin;string;Weapon to Hold;goals;Name of .md2 player weapon model to hold. Example: 'w_hyperblaster'
-key_health_func_button;float;Amnt. Damage to Trigger;health;Amount of damage this button takes before being triggered.
-key_health_func_door;float;Amnt. Damage to Trigger;health;Amount of damage this door takes before being triggered.
-key_health_func_explosive;float;Amnt. Damage to Trigger;health;Amount of damage this entity takes before exploding.
-key_height;float;Mov. Distance;height;Movement distance of the platform.
-key_height_misc_player_mannequin;integer;Model Type;height;Type of model to use. 1 = Female, 2 = Male, 3 = Cyborg
-key_image_misc_flare;string;Image;image;Path to custom flare image to use instead of the default one.
-key_image_misc_player_mannequin;string;Image;image;Path to custom PCX skin image to use instead of the default one. Example: venus.
-key_killtarget;string;Target to Kill;killtarget;Target to fully delete.
-key_killtarget_target_anger;string;Anger Directed To;killtarget;Target to be angry at.
-key_light;float;Light Brightness;light;Brightness intensity of this light entity. Positive values: brighter lighting. Negative values: subtracts lighting from surrounding entities.
-key_lip;float;Post-Move Lip;lip;Lip remaining after move.
-key_mangle;angle;Spotlight Direction;mangle;Turns the light into a spotlight and specifies the direction of light using yaw(x), pitch(y) and roll(z) in degrees. Yaw specifies the angle around the Z-axis from 0 to 359 degrees and pitch specifies the angle from 90 (straight up) to -90 (straight down). Roll has no effect, so use any value (e.g. 0). Often easier than the 'target' method.
-key_map;string;Next Destination;map;The next map to load. See Notes.
-key_mass_func_explosive;float;Mass (Debris);mass;When exploding, leaves this amount of debris all around.
-key_message;string;Message;message;Displays this message when this entity is triggered.
-key_message_item;string;Pickup Message;message;Displays this message when this item is picked up.
-key_message_target_healthbar;string;Boss Name;message;The name of the boss displayed in the health bar.
-key_message_target_help;string;Computer Message;message;Displays this message when triggered.
-key_message_target_lightramp;string;Start/End Light Level;message;Starting/ending light level. See Notes.
-key_monster_slots;integer;Monster Slots;monster_slots;Points to invest in monster reinforcements. Increases up to 2x on Hard skill.
-key_noise_end;string;Sound On Ending;noise_end;Sound to play when the entity is finished.
-key_noise_func_train;string;Traveling Sound;noise;Sound that play while the entity is traveling.
-key_noise_middle;string;Sound While Active;noise_middle;Sound to play when the entity is active.
-key_noise_start;string;Sound On Start;noise_start;Sound to play when the entity is started.
-key_pathtarget_func_clock;string;Target to Activate;pathtarget;When the entity is triggered, this target is triggered too.
-key_pathtarget_func_eye;string;Target to Look At;pathtarget;Automatically sets the eye position. Point this towards an info_notnull which gets freed after spawn.
-key_pathtarget_func_timer;string;Target to Travel To;pathtarget;Target to fire when we reach a point.
-key_pausetime;float;Pause Time;pausetime;Additional delay for START_ON timers.
-key_quantity_ammo;integer;Ammo Amount;quantity;How much ammo this box will give.
-key_radius;float;Detection Radius;radius;Detection Radius for players.
-key_radius_info_world_text;float;Text Size;radius;Specifies the size of the text.
-key_radius_misc_flare;float;Flare Radius;radius;Scale multiplier of the flare.
-key_radius_misc_player_mannequin;float;Model Scale;radius;Specifies the scale of the model.
-key_random_func_timer;float;Waiting Variance;random;Waiting time variance (+/-). Must be equal or less than the value in wait.
-key_reinforcements;string;Reinforcements;reinforcements;"Semicolon separated list of entity classes and cost of monster to spawn. (i.e. monster_flyer 1; monster_kamikaze 1)"
-key_rgba;color255;Flare Color;rgba;"Flare Color (Red Green Blue Alpha; each value falls inside the range [0-255])."
-key_rgba_target_laser;color255;Laser Color;rgba;"Laser Color (Red Green Blue Alpha; each value falls inside the range [0-255])."
-key_scale_misc_blackhole;float;Blackhole Scale;scale;Sets the scale of the blackhole.
-key_scale_misc_insane;float;Soldier Scale;scale;Sets the scale of the lobotomized soldier.
-key_scale_monster;float;Monster Scale;scale;Sets the scale of the monster.
-key_shadowlightconeangle;float;Shadow Light Cone Angle;shadowlightconeangle;Sets the outer cone angle if this light is a spot light.
-key_shadowlightendfadedistance;float;Shadow Light End Fade Distance;shadowlightendfadedistance;Distance in world units (from player's view position) in which the light is fully faded out and not rendered.
-key_shadowlightintensity;float;Shadow Light Intensity;shadowlightintensity;Intensity scalar for the light.
-key_shadowlightradius;float;Shadow Light Radius;shadowlightradius;Sets the radius of a dynamic shadow light. Becomes a dynamic light if this is bigger than 0.
-key_shadowlightresolution;integer;Shadow Light Resolution;shadowlightresolution;"Shadow map resolution; leave blank to automatically determine from radius."
-key_shadowlightstartfadedistance;float;Shadow Light Start Fade Distance;shadowlightstartfadedistance;The distance in world units (from player's view position) in which fading begins.
-key_shadowlightstyle;integer;Shadow Light Style;shadowlightstyle;Appearance of the dynamic light. See Notes.
-key_shadowlightstyletarget;string;Shadow Light Style Target;shadowlightstyletarget;Light entity to pick up style ID from.
-key_sounds;boolean;Is Silent;sounds;If checked, silences the entity.
-key_sounds_func_water;integer;Sound Style;sounds;"Specifies the sound the water emits. 0 = Silent; 1 = Water 1; 2 = Water 2."
-key_sounds_info_world_text;integer;Text Color;sounds;"0 = White; 1 = Red; 2 = Blue; 3 = Green; 4 = Yellow; 5 = Black; 6 = Cyan; 7 = Orange."
-key_sounds_target_music;integer;CD Track;sounds;CD Track Number.
-key_speed_func_button;float;Button Speed;speed;Specifies how fast the button is pressed.
-key_speed_func_door;float;Door Speed;speed;Specifies how fast the door is opened.
-key_speed_func_eye;float;Detection Degrees;speed;Determines how fast we should move on each axis in order to reach the target.
-key_speed_func_plat;float;Platform Speed;speed;Specifies how fast the platform should move.
-key_speed_misc_crashviper;float;Crashing Speed;speed;How fast should the viper crash into the world.
-key_speed_misc_strogg_ship;float;Flying Speed;speed;How fast the ship should move from its starting position.
-key_speed_target_blaster;float;Rate of Fire;speed;How fast the blaster should shoot.
-key_speed_target_camera;float;Camera Speed;speed;How fast the camera should move.
-key_speed_target_earthquake;float;Earthquake Severity;speed;How severe the earthquake should be.
-key_speed_target_lightramp;float;Light Speed;speed;Speed of light.
-key_style_func_clock;integer;Clock Style;style;"0 = xx; 1 = xx:xx; 2 = xx:xx:xx"
-key_style_func_force_wall;integer;Wall Color Hue;style;Hue of the force wall.
-key_style_light;integer;Light Style;style;"Defines the lighting style. 0 = Normal; 1 = Flicker #1; 2 = Slow Strong Pulse; 3 = Candle #1; 4 = Fast Strobe; 5 = Gentle Pulse #1; 6 = Flicker #2; 7 = Candle #2; 8 = Candle #3; 9 = Slow Strobe; 10 = Fluorescent Flicker; 11 = Slow pulse, no black."
-key_target;string;Target to Activate;target;When picked up, activates this target.
-key_target_func_train;string;First Corner Target;target;The targetname of the first path_corner where the train activates.
-key_target_target_anger;string;Anger Target;target;Target to make angered.
-key_target_target_changelevel;string;Landmark Name;target;The targetname of the info_landmark to pinpoint this entity to.
-key_target_target_healthbar;string;Boss Target;target;The targetname of the monster that acts as the boss.
-key_targetname;string;Target Name for Events;targetname;Name of the entity for events.
-key_targetname_info_player_coop;string;Target Name for Events;targetname;Points to a spawnpoint matching the previous level's target_changelevel.
-key_team_func_door;string;Door Team Name;team;For teamed doors, this is the name that binds them.
-key_team_func_rotating;string;Rotation Team Name;team;For teamed brushes in this entity, this is the name that binds them.
-key_team_func_train;string;Train Team Name;team;For teamed brushes in a train, this is the name that binds them.
-key_team_func_water;string;Water Team Name;team;Teams this water brush with another entity that triggers it.
-key_team_item;string;Item Team Name;team;For teamed items, this is the name that teams them.
-key_team_target_character;string;Character Team;team;The team this character is linked to.
-key_vision_cone;float;Vision Cone;vision_cone;Determines how wide the vision cone should be.
-key_wait_func_button;float;Waiting Time;wait;Waiting time before the button is resetted.
-key_wait_func_door;float;Waiting Time;wait;Waiting time before the door is resetted.
-key_wait_func_eye;float;Waiting Time;wait;Waiting time after losing the target before returning to a neutral angle.
-key_wait_func_timer;float;Waiting Time;wait;Base Waiting time. Can be combined with random for differing variations.
-key_wait_func_water;float;Waiting Time;wait;Waiting time before water returns to its initial state.
-key_wait_hint_path;float;Waiting Time;wait;Waiting time before this path can be taken.
-key_wait_light;float;Fade Distance Multiplier;wait;Value that scales the fade distance of this light entity. Values larger than 1 make the light fade more quickly. Values lesser than 1 make the light fade slower and reach further.
-key_wait_target_mal_laser;float;Waiting Time;wait;Waitilg time of the laser.
+"key","type","fullname","basekey","text"
+"key__anglescale","float","Light Angle Scale","_anglescale","Sets a scaling factor for how much influence the angle of incidence of light on a surface has on the brightness of the surface. n must be between 0.0 and 1.0. Smaller values mean less attenuation, with zero meaning that angle of incidence has no effect at all on the brightness."
+"key__color","color","Light Color","_color","Color of the light entity."
+"key__deviance","float","Light Deviance","_deviance","Split up the light into a sphere of randomly positioned lights within radius 'n' (in world units). Useful to give shadows a wider penumbra. '_samples' specifies the number of lights in the sphere. The 'light' value is automatically scaled down for most lighting formulas (except linear and non-additive minlight) to attempt to keep the brightness equal."
+"key__dirt","float","Dirt Mapping","_dirt","Overrides dirt mapping choice from compiler."
+"key__dirt_light","integer","Dirt Mapping","_dirt",""Overrides dirt mapping choice from worldspawn for this particular light. -1 Forces off"," 0 = Worldspawn decides"," 1 = Forces on.""
+"key__dirtscale","float","Dirt Mapping Scale","_dirtscale","Overrides the global '_dirtscale' or '_dirtgain' settings to change how this light is affected by dirtmapping (ambient occlusion)."
+"key__light_channel_mask","integer","Light Channel Bitflag","_light_channel_mask","Bitflag that specifies which channels should be projected in the lighting. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392."
+"key__mincolor","color","Minlight Color","_mincolor","Color taken by minlight."
+"key__minlight","float","Minimum Light","_minlight","Minimum light for all surfaces."
+"key__minlight_exclude","string","Exclude from Minlight","_minlight_exclude","Textures to exclude from minlighting."
+"key__mirrorinside","boolean","Double-Sided Face","_mirrorinside","If checked, allows the use of double-sided faces."
+"key__object_channel_mask","integer","Transparency Bitflag","_object_channel_mask","Bitflag that specifies which channels should undergo transparency. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392."
+"key__phong","boolean","Phong Shading","_phong","If checked, enables phong shading in the brush."
+"key__phong_angle","float","Phong Shading Angle","_phong_angle","If Phong Shading is enabled, specifies the lighting angle."
+"key__project_fov","float","Projection FOV","_project_fov","Specifies an angle for texture projection."
+"key__project_mangle","string","Projection Direction","_project_mangle","Specifies lighting projection for the texture."
+"key__project_texture","string","Projection Texture","_project_texture","Specifies which texture should be projected."
+"key__samples","float","Amnt. Of Deviance Lights","_samples","Number of lights to use for '_deviance'. Only used if '_deviance' is set."
+"key__shadow","boolean","Shadow Casting","_shadow","If checked, the entity casts a shadow."
+"key__shadow_channel_mask","integer","Shadow Channel Mask","_shadow_channel_mask","Bitflag that specifies which channels should cast a shadow in the lighting. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392."
+"key__shadowself","boolean","Shadow Over Self","_shadowself","If checked, casts a shadow over itself."
+"key__softangle","float","Spotlight Soft Angle","_softangle","Specifies the angle in degrees for an inner spotlight cone (must be less than the 'angle' cone. Creates a softer transition between the full brightness of the inner cone to the edge of the outer cone."
+"key__surface","string","Surface Light Texture","_surface","Makes surfaces with the given texture name emit light, by using this light as a template which is copied across those surfaces. Lights are spaced about 128 units (though possibly closer due to bsp splitting) apart and positioned 2 units above the surfaces"
+"key__surface_offset","float","Surface Light Offset","_surface_offset","Controls the offset lights are placed above surfaces for '_surface'."
+"key__surface_spotlight","boolean","Is Surface Spotlight?","_surface_spotlight",""Is this surface light a spotlight? If so, orient it so it points away from the surface normal. 0 = No"," 1 = Yes.""
+"key_accel_func_plat","float","Acceleration","accel","After activation, it accelerates at this rate. Its top speed is mentioned in speed."
+"key_accel_func_rotating","float","Acceleration","accel","If the accel flag is checked, after activation, it accelerates at this rate. Its top speed is mentioned in speed."
+"key_accel_func_water","float","Acceleration","accel","Determines raising speed based on the lowest player's distance. It's the divisor."
+"key_alpha_misc_blackhole","float","Blackhole Alpha","alpha","Sets the transparency of the blackhole."
+"key_alpha_misc_insane","float","Soldier Alpha","alpha","Sets the transparency of the lobotomized soldier."
+"key_alpha_monster","float","Monster Alpha","alpha","Sets the transparency of the monster."
+"key_ammo","integer","Ammo Amount","ammo","Amount of ammo this weapon gives on pickup."
+"key_angle","integer","Angle","angle","Facing angle of the entity (Yaw)."
+"key_angle_info_world_text","integer","Text Angle","angle",""Facing angle of the text (Yaw 0-360). -3 = Tracks player"," -2 = Down"," -1 = Up.""
+"key_angle_light","float","Light Cone Angle","angle","Specifies the angle in degrees for a spotlight cone."
+"key_angles","angle","Angles","angles","Facing angles of the entity (Pitch Yaw Roll)."
+"key_bmodel_anim_alt_end","integer","Alt. Animation End Frame","bmodel_anim_alt_end","End frame of alternate animation."
+"key_bmodel_anim_alt_nowrap","boolean","Alt. Animation No Wrapping","bmodel_anim_alt_nowrap","If checked, alternate frames are clamped rather than wrapped."
+"key_bmodel_anim_alt_speed","integer","Alt. Animation Speed","bmodel_anim_alt_speed","Alternate animation speed in milliseconds."
+"key_bmodel_anim_alt_start","integer","Alt. Animation Starting Frame","bmodel_anim_alt_start","Starting frame of alternate animation."
+"key_bmodel_anim_alt_style","integer","Alt. Animation Style","bmodel_anim_alt_style",""0 = Forwards"," 1 = Backwards"," 2 = Random""
+"key_bmodel_anim_end","integer","Animation End Frame","bmodel_anim_end","End frame of animation."
+"key_bmodel_anim_nowrap","boolean","Animation No Wrapping","bmodel_anim_nowrap","If checked, frames are clamped rather than wrapped."
+"key_bmodel_anim_speed","integer","Animation Speed","bmodel_anim_speed","Animation speed in milliseconds."
+"key_bmodel_anim_start","integer","Animation Starting Frame","bmodel_anim_start","Starting frame of animation."
+"key_bmodel_anim_style","integer","Animation Style","bmodel_anim_style",""0 = Forwards"," 1 = Backwards"," 2 = Random""
+"key_count_func_clock","integer","Counter","count","Clock counter."
+"key_count_target_character","integer","Character Position","count","The position of this character in the overall target_string string."
+"key_count_target_earthquake","float","Earthquake Duration","count","Overall duration of the earthquake."
+"key_decel_func_plat","float","Deceleration","decel","After activation, it desacelerates at this rate. Starts from the top speed and goes down to 0."
+"key_decel_func_rotating","float","Deceleration","decel","If the accel flag is checked, after activation, it desacelerates at this rate. Starts from the top speed and goes down to 0."
+"key_delay","float","Target Firing Delay","delay","Target delay time."
+"key_delay_func_object_repair","float","Spark Delay","delay","Delay time between sparks."
+"key_delay_light","integer","Attenuation Style","delay",""Attenuation formula for this light entity. 0 = Linear falloff"," 1 = Inv. distance falloff"," 2 = Inv. distance squared"," 3 = No falloff"," 4 = Local minlight"," 5 = Inv. distance 2""
+"key_delay_target_healthbar","float","Vanishing Delay","delay","After the boss is killed, the bar spends this amount of time on screen before disappearing."
+"key_delay_target_mal_laser","float","Laser Delay","delay","Laser Delay."
+"key_distance_func_door_rotating","float","Rotation in Degrees","distance","Rotation in degrees of the door."
+"key_distance_misc_player_mannequin","float","Gesture When Triggered","distance","Gesture To Use When Triggered. 0 = FlipOff, 1 = Salute, 2 = Taunt, 3 = Wave, 4 = Point."
+"key_dmg_func_door","float","Amnt. Damage on Block","dmg","Amount of damage the door takes when blocked."
+"key_dmg_func_explosive","float","Amnt. Damage Dealt","dmg","When exploding, deals this amount of damage on its radius."
+"key_dmg_func_object","float","Amnt. Damage on Crush","dmg","Deals this amount of damage when it crushes another entity (mostly players)."
+"key_dmg_misc_viper_bomb","float","Amnt. Damage on Explosion","dmg","Deals this amount of damage on explosion."
+"key_dmg_target_blaster","float","Amnt. Damage Dealt","dmg","Deals this amount of damage per blast."
+"key_dmg_target_laser","float","Amnt. Damage Dealt","dmg","Deals this amount of damage over time as long as the target is touched by the laser."
+"key_eye_position","vector","Eye Offset","eye_position","Values X Y Z, signals the offset from the origin brush's center of the camera where the eye is located."
+"key_fade_end_dist","integer","Fade Ending Distance","fade_end_dist","Distance in units that fade ends, should be greater than fade_start_dist."
+"key_fade_start_dist","integer","Fade Starting Distance","fade_start_dist","Distance in units that fade begins, should be smaller than fade_end_dist."
+"key_goals_misc_player_mannequin","string","Weapon to Hold","goals","Name of .md2 player weapon model to hold. Example: 'w_hyperblaster'"
+"key_health_func_button","float","Amnt. Damage to Trigger","health","Amount of damage this button takes before being triggered."
+"key_health_func_door","float","Amnt. Damage to Trigger","health","Amount of damage this door takes before being triggered."
+"key_health_func_explosive","float","Amnt. Damage to Trigger","health","Amount of damage this entity takes before exploding."
+"key_height","float","Mov. Distance","height","Movement distance of the platform."
+"key_height_misc_player_mannequin","integer","Model Type","height","Type of model to use. 1 = Female, 2 = Male, 3 = Cyborg"
+"key_image_misc_flare","string","Image","image","Path to custom flare image to use instead of the default one."
+"key_image_misc_player_mannequin","string","Image","image","Path to custom PCX skin image to use instead of the default one. Example: venus."
+"key_killtarget","string","Target to Kill","killtarget","Target to fully delete."
+"key_killtarget_target_anger","string","Anger Directed To","killtarget","Target to be angry at."
+"key_light","float","Light Brightness","light","Brightness intensity of this light entity. Positive values: brighter lighting. Negative values: subtracts lighting from surrounding entities."
+"key_lip","float","Post-Move Lip","lip","Lip remaining after move."
+"key_mangle","angle","Spotlight Direction","mangle","Turns the light into a spotlight and specifies the direction of light using yaw(x), pitch(y) and roll(z) in degrees. Yaw specifies the angle around the Z-axis from 0 to 359 degrees and pitch specifies the angle from 90 (straight up) to -90 (straight down). Roll has no effect, so use any value (e.g. 0). Often easier than the 'target' method."
+"key_map","string","Next Destination","map","The next map to load. See Notes."
+"key_mass_func_explosive","float","Mass (Debris)","mass","When exploding, leaves this amount of debris all around."
+"key_message","string","Message","message","Displays this message when this entity is triggered."
+"key_message_item","string","Pickup Message","message","Displays this message when this item is picked up."
+"key_message_target_healthbar","string","Boss Name","message","The name of the boss displayed in the health bar."
+"key_message_target_help","string","Computer Message","message","Displays this message when triggered."
+"key_message_target_lightramp","string","Start/End Light Level","message","Starting/ending light level. See Notes."
+"key_monster_slots","integer","Monster Slots","monster_slots","Points to invest in monster reinforcements. Increases up to 2x on Hard skill."
+"key_noise_end","string","Sound On Ending","noise_end","Sound to play when the entity is finished."
+"key_noise_func_train","string","Traveling Sound","noise","Sound that play while the entity is traveling."
+"key_noise_middle","string","Sound While Active","noise_middle","Sound to play when the entity is active."
+"key_noise_start","string","Sound On Start","noise_start","Sound to play when the entity is started."
+"key_pathtarget_func_clock","string","Target to Activate","pathtarget","When the entity is triggered, this target is triggered too."
+"key_pathtarget_func_eye","string","Target to Look At","pathtarget","Automatically sets the eye position. Point this towards an info_notnull which gets freed after spawn."
+"key_pathtarget_func_timer","string","Target to Travel To","pathtarget","Target to fire when we reach a point."
+"key_pausetime","float","Pause Time","pausetime","Additional delay for START_ON timers."
+"key_quantity_ammo","integer","Ammo Amount","quantity","How much ammo this box will give."
+"key_radius","float","Detection Radius","radius","Detection Radius for players."
+"key_radius_info_world_text","float","Text Size","radius","Specifies the size of the text."
+"key_radius_misc_flare","float","Flare Radius","radius","Scale multiplier of the flare."
+"key_radius_misc_player_mannequin","float","Model Scale","radius","Specifies the scale of the model."
+"key_random_func_timer","float","Waiting Variance","random","Waiting time variance (+/-). Must be equal or less than the value in wait."
+"key_reinforcements","string","Reinforcements","reinforcements",""Semicolon separated list of entity classes and cost of monster to spawn. (i.e. monster_flyer 1"," monster_kamikaze 1)""
+"key_rgba","color255","Flare Color","rgba",""Flare Color (Red Green Blue Alpha"," each value falls inside the range [0-255]).""
+"key_rgba_target_laser","color255","Laser Color","rgba",""Laser Color (Red Green Blue Alpha"," each value falls inside the range [0-255]).""
+"key_scale_misc_blackhole","float","Blackhole Scale","scale","Sets the scale of the blackhole."
+"key_scale_misc_insane","float","Soldier Scale","scale","Sets the scale of the lobotomized soldier."
+"key_scale_monster","float","Monster Scale","scale","Sets the scale of the monster."
+"key_shadowlightconeangle","float","Shadow Light Cone Angle","shadowlightconeangle","Sets the outer cone angle if this light is a spot light."
+"key_shadowlightendfadedistance","float","Shadow Light End Fade Distance","shadowlightendfadedistance","Distance in world units (from player's view position) in which the light is fully faded out and not rendered."
+"key_shadowlightintensity","float","Shadow Light Intensity","shadowlightintensity","Intensity scalar for the light."
+"key_shadowlightradius","float","Shadow Light Radius","shadowlightradius","Sets the radius of a dynamic shadow light. Becomes a dynamic light if this is bigger than 0."
+"key_shadowlightresolution","integer","Shadow Light Resolution","shadowlightresolution",""Shadow map resolution"," leave blank to automatically determine from radius.""
+"key_shadowlightstartfadedistance","float","Shadow Light Start Fade Distance","shadowlightstartfadedistance","The distance in world units (from player's view position) in which fading begins."
+"key_shadowlightstyle","integer","Shadow Light Style","shadowlightstyle","Appearance of the dynamic light. See Notes."
+"key_shadowlightstyletarget","string","Shadow Light Style Target","shadowlightstyletarget","Light entity to pick up style ID from."
+"key_sounds","boolean","Is Silent","sounds","If checked, silences the entity."
+"key_sounds_func_water","integer","Sound Style","sounds",""Specifies the sound the water emits. 0 = Silent"," 1 = Water 1"," 2 = Water 2.""
+"key_sounds_info_world_text","integer","Text Color","sounds",""0 = White"," 1 = Red"," 2 = Blue"," 3 = Green"," 4 = Yellow"," 5 = Black"," 6 = Cyan"," 7 = Orange.""
+"key_sounds_target_music","integer","CD Track","sounds","CD Track Number."
+"key_speed_func_button","float","Button Speed","speed","Specifies how fast the button is pressed."
+"key_speed_func_door","float","Door Speed","speed","Specifies how fast the door is opened."
+"key_speed_func_eye","float","Detection Degrees","speed","Determines how fast we should move on each axis in order to reach the target."
+"key_speed_func_plat","float","Platform Speed","speed","Specifies how fast the platform should move."
+"key_speed_misc_crashviper","float","Crashing Speed","speed","How fast should the viper crash into the world."
+"key_speed_misc_strogg_ship","float","Flying Speed","speed","How fast the ship should move from its starting position."
+"key_speed_target_blaster","float","Rate of Fire","speed","How fast the blaster should shoot."
+"key_speed_target_camera","float","Camera Speed","speed","How fast the camera should move."
+"key_speed_target_earthquake","float","Earthquake Severity","speed","How severe the earthquake should be."
+"key_speed_target_lightramp","float","Light Speed","speed","Speed of light."
+"key_style_func_clock","integer","Clock Style","style",""0 = xx"," 1 = xx:xx"," 2 = xx:xx:xx""
+"key_style_func_force_wall","integer","Wall Color Hue","style","Hue of the force wall."
+"key_style_light","integer","Light Style","style",""Defines the lighting style. 0 = Normal"," 1 = Flicker #1"," 2 = Slow Strong Pulse"," 3 = Candle #1"," 4 = Fast Strobe"," 5 = Gentle Pulse #1"," 6 = Flicker #2"," 7 = Candle #2"," 8 = Candle #3"," 9 = Slow Strobe"," 10 = Fluorescent Flicker"," 11 = Slow pulse, no black.""
+"key_target","string","Target to Activate","target","When picked up, activates this target."
+"key_target_func_train","string","First Corner Target","target","The targetname of the first path_corner where the train activates."
+"key_target_target_anger","string","Anger Target","target","Target to make angered."
+"key_target_target_changelevel","string","Landmark Name","target","The targetname of the info_landmark to pinpoint this entity to."
+"key_target_target_healthbar","string","Boss Target","target","The targetname of the monster that acts as the boss."
+"key_targetname","string","Target Name for Events","targetname","Name of the entity for events."
+"key_targetname_info_player_coop","string","Target Name for Events","targetname","Points to a spawnpoint matching the previous level's target_changelevel."
+"key_team_func_door","string","Door Team Name","team","For teamed doors, this is the name that binds them."
+"key_team_func_rotating","string","Rotation Team Name","team","For teamed brushes in this entity, this is the name that binds them."
+"key_team_func_train","string","Train Team Name","team","For teamed brushes in a train, this is the name that binds them."
+"key_team_func_water","string","Water Team Name","team","Teams this water brush with another entity that triggers it."
+"key_team_item","string","Item Team Name","team","For teamed items, this is the name that teams them."
+"key_team_target_character","string","Character Team","team","The team this character is linked to."
+"key_vision_cone","float","Vision Cone","vision_cone","Determines how wide the vision cone should be."
+"key_wait_func_button","float","Waiting Time","wait","Waiting time before the button is resetted."
+"key_wait_func_door","float","Waiting Time","wait","Waiting time before the door is resetted."
+"key_wait_func_eye","float","Waiting Time","wait","Waiting time after losing the target before returning to a neutral angle."
+"key_wait_func_timer","float","Waiting Time","wait","Base Waiting time. Can be combined with random for differing variations."
+"key_wait_func_water","float","Waiting Time","wait","Waiting time before water returns to its initial state."
+"key_wait_hint_path","float","Waiting Time","wait","Waiting time before this path can be taken."
+"key_wait_light","float","Fade Distance Multiplier","wait","Value that scales the fade distance of this light entity. Values larger than 1 make the light fade more quickly. Values lesser than 1 make the light fade slower and reach further."
+"key_wait_target_mal_laser","float","Waiting Time","wait","Waitilg time of the laser."
