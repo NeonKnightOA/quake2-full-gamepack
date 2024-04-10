@@ -23,7 +23,7 @@
 "key__softangle","float","Spotlight Soft Angle","_softangle","Specifies the angle in degrees for an inner spotlight cone (must be less than the 'angle' cone. Creates a softer transition between the full brightness of the inner cone to the edge of the outer cone."
 "key__surface","string","Surface Light Texture","_surface","Makes surfaces with the given texture name emit light, by using this light as a template which is copied across those surfaces. Lights are spaced about 128 units (though possibly closer due to bsp splitting) apart and positioned 2 units above the surfaces"
 "key__surface_offset","float","Surface Light Offset","_surface_offset","Controls the offset lights are placed above surfaces for '_surface'."
-"key__surface_spotlight","boolean","Is Surface Spotlight?","_surface_spotlight",""Is this surface light a spotlight? If so, orient it so it points away from the surface normal. 0 = No"," 1 = Yes.""
+"key__surface_spotlight","boolean","Is Surface Spotlight?","_surface_spotlight","Is this surface light a spotlight? If so, orient it so it points away from the surface normal. 0 = No, 1 = Yes."
 "key_accel_func_plat","float","Acceleration","accel","After activation, it accelerates at this rate. Its top speed is mentioned in speed."
 "key_accel_func_rotating","float","Acceleration","accel","If the accel flag is checked, after activation, it accelerates at this rate. Its top speed is mentioned in speed."
 "key_accel_func_water","float","Acceleration","accel","Determines raising speed based on the lowest player's distance. It's the divisor."
