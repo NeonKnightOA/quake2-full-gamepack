@@ -3,7 +3,7 @@
 "key__color","color","Light Color","_color","Color of the light entity."
 "key__deviance","float","Light Deviance","_deviance","Split up the light into a sphere of randomly positioned lights within radius 'n' (in world units). Useful to give shadows a wider penumbra. '_samples' specifies the number of lights in the sphere. The 'light' value is automatically scaled down for most lighting formulas (except linear and non-additive minlight) to attempt to keep the brightness equal."
 "key__dirt","float","Dirt Mapping","_dirt","Overrides dirt mapping choice from compiler."
-"key__dirt_light","integer","Dirt Mapping","_dirt",""Overrides dirt mapping choice from worldspawn for this particular light. -1 Forces off"," 0 = Worldspawn decides"," 1 = Forces on.""
+"key__dirt_light","integer","Dirt Mapping","_dirt","Overrides dirt mapping choice from worldspawn for this particular light. -1 Forces off, 0 = Worldspawn decides, 1 = Forces on."
 "key__dirtscale","float","Dirt Mapping Scale","_dirtscale","Overrides the global '_dirtscale' or '_dirtgain' settings to change how this light is affected by dirtmapping (ambient occlusion)."
 "key__light_channel_mask","integer","Light Channel Bitflag","_light_channel_mask","Bitflag that specifies which channels should be projected in the lighting. 0 = legacy behavior. Formula for every bitflag is 2^(X-1), so for channels 4, 13 and 20, it would be 2^(4-1)+2^(13-1)+2^(20-1) = 2^3+2^12+2^19 = 8+4096+524288 = 528392."
 "key__mincolor","color","Minlight Color","_mincolor","Color taken by minlight."
